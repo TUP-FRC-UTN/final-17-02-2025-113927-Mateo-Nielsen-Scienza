@@ -1,0 +1,53 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 600px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+button.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.incorrect {
+  background-color: #f44336;
+  color: white;
+}
+
+.message {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

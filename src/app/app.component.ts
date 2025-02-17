@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, Router } from '@angular/router'; // Agregar Router
+import { CommonModule } from '@angular/common';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Final170225';
+  constructor(
+    public authService: AuthService,
+    private router: Router 
+  ) {}
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']); 
+  }
 }
