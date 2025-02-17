@@ -26,7 +26,7 @@ export class AuthService {
       return of(adminUser);
     }
 
-    // Validación estudiante
+ 
     const EMAIL_PATTERN = /^[0-9]+@tecnicatura\.frc\.utn\.edu\.ar$/;
     if (!EMAIL_PATTERN.test(username)) {
       return throwError(() => new Error('El correo debe ser institucional'));
